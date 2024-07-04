@@ -15,7 +15,7 @@ const 함수예제 = () => {
                 render() 를 작성하지 않음
             </p>
         </>
-    )
-}
+    );
+};
 
 export default 함수예제;
