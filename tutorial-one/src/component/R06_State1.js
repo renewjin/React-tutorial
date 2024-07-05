@@ -10,7 +10,7 @@ function으로 돌아왔는데 초기에 function에서 부족한 부분을 채�
 Hook이라는 기능을 만듬
 
 Hook 종류 = react에서 어떤 동작이나 상태를 표현하거나 변경할 때 사용하는 기능들
- 1. useState
+ 1. useState : 특정상태의 값을 변경해줌
  2. useEffect 
  3. useContext 
  4. useReducer 

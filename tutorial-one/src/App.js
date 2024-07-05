@@ -16,17 +16,24 @@ R01_ClassCompoent.js를 가져와서 App.js에 적용
 R01_ClassCompoent.js R01 이라는 별칭을 사용해서 App.js 적용
 */
 
-import R01 from './R01_ClassComponent.js'
-import R02 from './R02_FunctionComponent.js'
-import Props1 from './R03_Prop.js'
-import Props2 from './R04_Props2.js'
-import Props3 from './R05_Props3.js'
-import 예제1번 from './R06_State1.js'
-//import 예제2번 from './R07_State2.js';
-import 예제3번 from './R08_State3.js';
-import 예제4번 from './R09_State4.js';
-import 예제5번 from './R10_State5.js';
-import 댓글창 from './R11_State6.js';
+import R01 from './component/R01_ClassComponent.js'
+import R02 from './component/R02_FunctionComponent.js'
+import Props1 from './component/R03_Prop.js'
+import Props2 from './component/R04_Props2.js'
+import Props3 from './component/R05_Props3.js'
+import 예제1번 from './component/R06_State1.js'
+import 예제2번 from './component/R07_State2.js';
+import 예제3번 from './component/R08_State3.js';
+import 예제4번 from './component/R09_State4.js';
+import 예제5번 from './component/R10_State5.js';
+import 댓글창 from './component/R11_State6.js';
+import 컨텍스트1 from './component/R12_Context1.js';
+import 컨텍스트2 from './component/R13_Context2.js';
+import 컨텍스트3 from './component/R15_Context3/Parents.js';
+import 컨텍스트4 from './component/R16_Context4/최종출력공간.js'
+import 부트스트랩1 from './component/R14_Bootstrap.js';
+
+
 function App() {
 
   return (
@@ -38,11 +45,13 @@ function App() {
     <div className="App-header">
       {/* <R01/> */}
       {/* <R02/> */}
+      {/*
       <Props1 num='1' name='홍길동' age='20' score='90'/>
       <Props1 num='2' name='홍길은' age='30' score='80'/>
       <Props1 num='3' name='홍길금' age='40' score='70'/>
       <h3>Props 예제2번 사용하기</h3>
       <Props2 name='강감찬' age='72' gender='남자' />
+      */}
       {/*
       <Props2 name='강감찬' age='72' gender='남자' />
 
@@ -65,15 +74,21 @@ function App() {
       R05_Props3 div 로 전체 감싸고 className="info-ex"
       테두리 orage 색 추가
       */}
-      <Props3 num = '5' name = "김연정" age = "40" gender = "여자" phone = "010-1111-2222" />
+      {/*<Props3 num = '5' name = "김연정" age = "40" gender = "여자" phone = "010-1111-2222" />
     
-      <예제1번/>
-      <예제3번 init="50" step="10"/>
+      {/*<예제1번/>
+      {/*<예제3번 init="50" step="10"/>
       {/* init = 처음에 시작할 숫자값 step = 몇 씩 숫자가 커지고 작아질 것인가 */}
-      <예제4번 age="40" years="1" />
+      {/*<예제4번 age="40" years="1" />*/}
 
-      <예제5번 />
-      <댓글창 />
+      {/*<예제5번 />*/}
+      {/*<댓글창 />*/}
+
+      {/*<컨텍스트1 />*/}
+      {/*<부트스트랩1 />*/}
+      {/*<컨텍스트2 />*/}
+      <컨텍스트3/>
+      <컨텍스트4/>
     </div>
 
     
