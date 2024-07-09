@@ -21,8 +21,8 @@ const 작성하는공간 = () => {
     return (
         <div>
             <label htmlFor="inputName">이름</label>
-            <input t
-                ype="text" 
+            <input 
+                type="text" 
                 id="inputName"
                 onChange={(e) => {setInputName(e.target.value)}}
                 value={inputName}
