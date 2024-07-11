@@ -32,19 +32,40 @@ const TicTapToe = () => {
 
   //const [isCorrect, setIsCorrect] = useState(false); // 정답확인 전이라 false
 
+  const [timer, setTimer] = useState(10);
+
+  const [isTimerActive, setIsTimerActive] = useState(false);
+
+  useEffect(()=>{
+    let countdown;
+    if(isTimerActive && timer > 0) {
+      countdown = setTimeout(()=> {
+        setTimer(timer-1);
+      }, 1000);
+    } else if (timer === 0) {
+      alert("시간초과! 게임이 종료되었습니다.");
+    }
+
+  });
+
   const 숫자클릭하기 = (number) => {
     //만약에 현재 사용자가 클릭해야하는 숫자와 사용자가 클릭한 숫자가 서로 일치하는가 ?
     if (number === nextNumber) {
+      if (number === 1) {
+        setIsTimerActive(true);
+      }
       if (number === 9) {
         setMessage("축하합니다. 모든 숫자를 순서대로 클릭했습니다.");
         //setIsCorrect(true);
         // 9 까지 왔으면 다음 숫자를 10 으로 만들어주기
         setNextNumber(10);
+        setIsTimerActive(false);
       } else {
         setNextNumber(nextNumber + 1);
       }
     } else {
       setMessage("틀렸습니다. 처음부터 다시하세요.");
+      setIsTimerActive(false);
     }
   };
 
@@ -56,10 +77,12 @@ const TicTapToe = () => {
     // 메세지 세팅
     setMessage('');
     //setIsCorrect(false);
+    setTimer(10);
   }
   return (
     <div className="tictaptoe-container">
       <h1>틱탭토</h1>
+      <div className="timer">남은시간 {timer}초</div>
       <div className="tictaptoe-grid">
         {numbers.map((number) => (
           <button className="tictaptoe-button" key={number} onClick={() => 숫자클릭하기(number)}>
