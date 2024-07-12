@@ -49,10 +49,17 @@ const Pagination = ({itemPerPage, totalItems, paginate, currentPage}) => {
                 {/* 페이지 10페이지 까지만 보여주고 */}
                 {/* << 화살표 이용해서 이전으로 기능 만들기 */}
                 {currentPage > 1 &&(
-                    <li><a onClick={() => paginate(currentPage - 1)} href="!#" className="page-link">
+                    <li><a onClick={() => paginate(1)} href="!#" className="page-link">
                         &laquo;
                     </a></li>
                 )}
+
+                {currentPage > 1 &&(
+                    <li><a onClick={() => paginate(currentPage - 1)} href="!#" className="page-link">
+                        &lt;
+                    </a></li>
+                )}
+
                 {/* 모든 페이지 번호 */}
                 {renderPageNumber().map(번호 => (
                     <li key={번호} className={`page-item ${currentPage === 번호 ? 'active' :  ''}`}>
@@ -64,6 +71,12 @@ const Pagination = ({itemPerPage, totalItems, paginate, currentPage}) => {
                 {/* >> 화살표 이용해서 이전으로 기능 만들기 */}
                 {currentPage < totalPages &&(
                     <li><a onClick={() => paginate(currentPage + 1)} href="!#" className="page-link">
+                        &gt;
+                    </a></li>
+                )}
+
+                {currentPage < totalPages &&(
+                    <li><a onClick={() => paginate(totalPages)} href="!#" className="page-link">
                         &raquo;
                     </a></li>
                 )}
