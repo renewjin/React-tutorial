@@ -43,6 +43,8 @@ import Axios_Ex1 from './component/R25_Axios_Ex1.js';
 import { Axios_Ex2 as Axios예제2번 } from './component/R26_Axios_ex2.js';
 import Fetch예제1번 from './component/R28_Fetch_ex.js';
 import Fetch예제2번 from './component/R29_Fetch_Ex2.js';
+import Board from './component/R30_PageNation/Board.js';
+import Album from './component/R31_PageNationEx/Album.js';
 
 function App() {
 
@@ -107,7 +109,9 @@ function App() {
       {/*<Axios_Ex1 />*/}
       {/*<Axios예제2번/>*/}
       {/*<Fetch예제1번 />*/}
-      <Fetch예제2번 />
+      {/*<Fetch예제2번 />*/}
+      {/*<Board />*/}
+      <Album />
     </div>
 
     
