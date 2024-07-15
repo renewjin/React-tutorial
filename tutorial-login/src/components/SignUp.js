@@ -109,10 +109,9 @@ const Signup = () => {
             ==똑같음==
             <label><input/></label> 
              */}
-            <label>
-                ID : 
-                <input type='text'
-                    onChange={e => 아이디중복검사(e.target)}
+            <label>  ID :  
+                <input type="text" 
+                    onChange={e => 아이디중복검사(e.target.value)}
                     value={id}
                     className={idValidation ? '' : 'id-err'}
                 />
@@ -135,7 +134,7 @@ const Signup = () => {
             </label>
             <label>
             Name :
-                <input type='password'
+                <input type='text'
                 onChange={e => {setName(e.target.value)}} 
                 value={name}
                 />
