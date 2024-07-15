@@ -61,7 +61,7 @@ const 프로필 = () => {
                 <div>
                     <h2>미리보기</h2>
                     {선택한이미지.map((image, index) => (
-                        <img key={index} src={image} alt={`미리보기 ${index + 1}`} />
+                        <img key={index} src={image} />
                     ))}
                 </div>
             )}

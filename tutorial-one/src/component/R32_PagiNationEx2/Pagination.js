@@ -12,8 +12,15 @@ const Pagination = ({itemPerPage, totalItems, paginate, currentPage}) => {
             return pageNumbers;
         }
 
-        const startPage = Math.max(1, currentPage - 2);
-        const endPage = Math.min(totalPages, currentPage + 2);
+        let startPage = Math.max(1, currentPage - 2);
+        let endPage = Math.min(totalPages, currentPage + 2);
+        if (currentPage <= 2) {
+            startPage = 1;
+            endPage = 5;
+        } else if (currentPage >= totalPages - 1) {
+            startPage = totalPages - 4;
+            endPage = totalPages;
+        }
 
         // Ensuring we always display 5 page numbers
         //const extraPages = 5 - (endPage - startPage + 1);

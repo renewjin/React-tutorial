@@ -114,8 +114,8 @@ function App() {
       {/*<Fetch예제2번 />*/}
       {/*<Board />*/}
       {/*<Album />*/}
-      {/*<PaginationEx2 />*/}
-      <Profile />
+      <PaginationEx2 />
+      {/*<Profile />*/}
     </div>
 
     
