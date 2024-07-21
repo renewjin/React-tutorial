@@ -1,16 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Game from './component/Game.js';
 import GameTwoStep from './component/GameTwoStep.js';
 import { Routes, Route } from 'react-router-dom';
 import Home from './component/Home.js';
-import NavBar from './component/NavBar.js';
-import Header from './component/Header.js';
+import NavBar from './component/Layout/NavBar.js';
+import Header from './component/Layout/Header.js';
 import TodoList from './component/TodoList.js';
-import TicTapToe from './component/TicTapToe1.js';
-import TicTapToesTwoStep from './component/TicTapToeTwoStep.js';
+import TicTapToe from './component/TicTapToe/TicTapToe1.js';
+import TicTapToesTwoStep from './component/TicTapToe/TicTapToeTwoStep.js';
 import TypingTest from './component/TypingTest.js';
 import MovieRating from './component/Movie/MovieGrade.js';
+import Footer from './component/Layout/Footer.js';
+import Aquarium from './component/Projects/Aquarium.js';
+
 
 function App() {
   return (
@@ -26,8 +29,9 @@ function App() {
         <Route path='/ttt-twoStep' element={<TicTapToesTwoStep/>} />
         <Route path='/typingTest' element={<TypingTest/>} />
         <Route path='/movieRate' element={<MovieRating/>} />
-
+        <Route path='/aquariumProject' element={<Aquarium/>} />
       </Routes>
+      <Footer />
 
     </div>
   );

@@ -64,7 +64,7 @@ const Signup = () => {
 
         //회원가입 비동기 요청
         const input값들 = {}; //처음엔 들어온 값이 없으니 빈공간으로 설정
-        input값들.id = id; //id값이 들어오면 input값들에 id값을 작성해달라 설정
+        input값들.id = id; //id값이 들어오면 input값들에 id값을 작성해달라 설정 ->input값들.DTO에적힌변수명
         input값들.pw = pw; //pw값이 들어오면 input값들에 pw값을 작성해달라 설정
         input값들.name = name;
         // 만약 input에 id값으로 khT를 작성하고, pw값으로 khT1234를 작성하면
